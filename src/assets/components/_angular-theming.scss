@@ -1,0 +1,61 @@
+//@import '~@angular/material/prebuilt-themes/';
+@import "~@angular/material/theming";
+@import "base";
+
+@include mat-core();
+
+$blue: (
+  50 : #e6f9f3,
+  100 : #c1f0e2,
+  200 : #98e7cf,
+  300 : #6eddbc,
+  400 : #4fd5ad,
+  500 : #30ce9f,
+  600 : #2bc997,
+  700 : #24c28d,
+  800 : #1ebc83,
+  900 : #13b072,
+  A100 : #e1fff2,
+  A200 : #aeffdd,
+  A400 : #7bffc7,
+  A700 : #62ffbc,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$app-primary: mat-palette($blue);
+$app-secondary: mat-palette($mat-pink, A200, A100, A400);
+$app-warn: mat-palette($mat-red);
+
+$app-theme: mat-light-theme($app-primary, $app-secondary, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+// fix mat-select in modal windows
+.cdk-overlay-container {
+  z-index: 9999 !important;
+}
+
+// fix mat-expansion-panel font inheritance
+.mat-expansion-panel-content {
+  font-family: inherit !important;
+}
+
+.mat-button-toggle-checked .mat-button-toggle-label-content{
+  background-color: $blue-green !important;
+}

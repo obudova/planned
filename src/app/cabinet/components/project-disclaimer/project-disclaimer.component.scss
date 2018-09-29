@@ -1,0 +1,25 @@
+@import "~assets/components/base";
+:host {
+  margin-right: 40px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.project {
+  text-align: center;
+  font-size: 13px;
+  &__logo {
+    height: 50px;
+    width: 50px;
+    background: $blue-green;
+    border-radius: 30%;
+  }
+
+  &__title {
+  }
+
+  &__tag{
+    color: $blue-green;
+  }
+}

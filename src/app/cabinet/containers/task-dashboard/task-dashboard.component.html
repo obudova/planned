@@ -1,5 +1,5 @@
-<div class="filter-container">
-  <mat-button-toggle-group #group="matButtonToggleGroup">
+<div class="filter-container container">
+  <mat-button-toggle-group #group="matButtonToggleGroup" color="primary">
     <mat-button-toggle value="left">
       Personal
     </mat-button-toggle>
@@ -11,7 +11,14 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
   <div class="example-selected-value">Selected value: {{group.value}}</div>
-
   <hr>
 </div>
+
+<ng-container *ngIf="projects">
+  <div class="projects-container container">
+    <project-disclaimer *ngFor="let project of projects" [project]="project"></project-disclaimer>
+  </div>
+</ng-container>
+
+
 
