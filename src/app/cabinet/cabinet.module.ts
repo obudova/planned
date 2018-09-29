@@ -40,11 +40,13 @@ import {
     MatTooltipModule,
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { ProjectDisclaimerComponent } from './components/project-disclaimer/project-disclaimer.component'
 
 @NgModule({
     declarations: [
-        TaskDashboardComponent,
-        MenubarComponent
+      TaskDashboardComponent,
+      MenubarComponent,
+      ProjectDisclaimerComponent
     ],
     imports: [
         BrowserModule,

@@ -7,6 +7,7 @@ import { TaskService } from '../../../../services/task.service';
   styleUrls: ['./task-dashboard.component.scss']
 })
 export class TaskDashboardComponent implements OnInit {
+  projects: any[];
   constructor(
     private taskService: TaskService
   ) { }
@@ -15,6 +16,11 @@ export class TaskDashboardComponent implements OnInit {
     this.taskService.listPersonalTasks()
       .subscribe((res) => {
         console.log(res);
+      })
+    this.taskService.listProjects()
+      .subscribe((res) => {
+        this.projects =res;
+        console.log(this.projects);
       })
   }
 }

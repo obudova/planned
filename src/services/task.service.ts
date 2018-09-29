@@ -21,4 +21,9 @@ export class TaskService {
       ...options
     });
   }
+  listProjects(options?: MakeRequestOptions) {
+    return this.requestService.request(`${this.apiUrl}/projects`, 'GET', {
+      ...options
+    });
+  }
 }
