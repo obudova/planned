@@ -17,7 +17,7 @@ export class TaskService {
     });
   }
   listProjectTasks(options?: MakeRequestOptions) {
-    return this.requestService.request(`${this.apiUrl}/project?is_personal=false`, 'GET', {
+    return this.requestService.request(`${this.apiUrl}/tasks?is_personal=false`, 'GET', {
       ...options
     });
   }

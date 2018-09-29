@@ -5,7 +5,7 @@
   height: 110px;
   box-sizing: border-box;
   margin-bottom: 28px;
-
+  padding: 18px 0;
 }
 
 .projects-container{
@@ -13,7 +13,55 @@
   justify-content: center;
 }
 
+.radio-container{
+  display: flex;
+  justify-content: center;
+}
+
+.input-form__group {
+  margin-right: 8px;
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+
+    .value {
+      padding: 8px 12px;
+      border: 1px solid currentColor;
+      border-radius: 20px;
+    }
+  }
+
+  label input[type="radio"]:checked ~ .value{
+    color: #1ebc83;
+  }
+}
+
 .tasks-container{
-  margin: 0 20px;
   box-sizing: border-box;
+}
+
+.tasks-list{
+  margin: 0 20px;
+  overflow: hidden;
+
+  h2{
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 400px;
+      height: 1px;
+      position: absolute;
+      background-color: aqua;
+      top: 50%;
+      left: calc(100% + 16px);
+    }
+  }
 }

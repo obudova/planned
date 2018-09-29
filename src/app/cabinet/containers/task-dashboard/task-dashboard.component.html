@@ -1,16 +1,24 @@
 <div class="filter-container container">
-  <mat-button-toggle-group #group="matButtonToggleGroup" color="primary">
-    <mat-button-toggle value="left">
-      Personal
-    </mat-button-toggle>
-    <mat-button-toggle value="center">
-      All
-    </mat-button-toggle>
-    <mat-button-toggle value="right">
-      Project
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-  <div class="example-selected-value">Selected value: {{group.value}}</div>
+  <div class="radio-container" [formGroup]="filterForm">
+    <div class="input-form__group">
+      <label for="personal">
+        <input type="radio" id="personal" name="filter" formControlName="filter" value="personal">
+        <span class="value">Personal</span>
+      </label>
+    </div>
+    <div class="input-form__group">
+      <label for="all">
+        <input type="radio" id="all" name="filter" formControlName="filter" value="all">
+        <span class="value">All</span>
+      </label>
+    </div>
+    <div class="input-form__group">
+      <label for="project">
+        <input type="radio" id="project" name="filter" formControlName="filter" value="project">
+        <span class="value">Project</span>
+      </label>
+    </div>
+  </div>
   <hr>
 </div>
 
@@ -21,9 +29,25 @@
 </ng-container>
 
 <ng-container *ngIf="tasks">
- <div class="tasks-container">
-   <task *ngFor="let task of tasks" [task]="task"></task>
- </div>
+  <div class="today tasks-list" *ngIf="tasksForToday.length">
+    <h2 class="color-primary">Today</h2>
+    <div class="tasks-container">
+      <task *ngFor="let task of tasksForToday" [task]="task"></task>
+    </div>
+  </div>
+  <div class="tomorrow tasks-list" *ngIf="tasksForTommorrow.length">
+    <h2 class="color-primary">Tomorrow</h2>
+    <div class="tasks-container">
+      <task *ngFor="let task of tasksForTommorrow" [task]="task"></task>
+    </div>
+  </div>
+  <div class="left-tasks tasks-list" *ngIf="leftTasks.length">
+    <h2 class="color-primary">Future</h2>
+    <div class="tasks-container">
+      <task *ngFor="let task of leftTasks" [task]="task"></task>
+    </div>
+  </div>
+
 </ng-container>
 
 

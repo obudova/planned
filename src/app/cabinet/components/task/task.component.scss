@@ -15,10 +15,10 @@
     border: 1px solid $dark-grey;
     border-radius: 20%;
     margin-right: 12px;
+    cursor: pointer;
   }
 
   &__info{
     flex-grow: 2;
   }
-
 }
