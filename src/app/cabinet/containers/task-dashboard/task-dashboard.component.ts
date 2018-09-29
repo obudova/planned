@@ -3,8 +3,8 @@ import { TaskService } from '../../../../services/task.service';
 
 @Component({
   selector: 'task-dashboard',
-  template: ` Hello, i'm task dashboard`,
-  styles: ['']
+  templateUrl: './task-dashboard.component.html',
+  styleUrls: ['./task-dashboard.component.scss']
 })
 export class TaskDashboardComponent implements OnInit {
   constructor(
