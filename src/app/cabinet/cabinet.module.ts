@@ -5,21 +5,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TaskService } from '../../services/task.service';
 import { RequestService } from '../../services/request.service';
 import {CommonModule} from '@angular/common';
+import { MenubarComponent } from './containers/menubar/menubar.component';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
-    TaskDashboardComponent
+    TaskDashboardComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatButtonModule,
   ],
   providers: [
     RequestService,
     TaskService,
   ],
   exports: [
-    TaskDashboardComponent
+    TaskDashboardComponent,
+    MenubarComponent
   ]
 })
 export class CabinetModule {
