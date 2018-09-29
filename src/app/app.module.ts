@@ -6,7 +6,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
-//hhh
 @NgModule({
     declarations: [
         AppComponent,

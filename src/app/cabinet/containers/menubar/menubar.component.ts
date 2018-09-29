@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {MatSidenav} from '@angular/material';
 
 @Component({
     selector: 'app-menu-bar',
@@ -7,9 +8,12 @@ import {Component} from '@angular/core';
 })
 
 export class MenubarComponent {
-    a: number;
+    @ViewChild('sidenav') sidenav: MatSidenav;
 
-    constructor() {
-        this.a = 33;
+    reason = '';
+
+    close(reason: string) {
+        this.reason = reason;
+        this.sidenav.close();
     }
 }
