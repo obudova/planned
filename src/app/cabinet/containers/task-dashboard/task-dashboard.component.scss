@@ -31,6 +31,7 @@
       padding: 8px 12px;
       border: 1px solid currentColor;
       border-radius: 20px;
+      color: $dark-grey
     }
   }
 
@@ -65,3 +66,11 @@
     }
   }
 }
+
+.btn-add-task {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  color: #fff;
+}
+

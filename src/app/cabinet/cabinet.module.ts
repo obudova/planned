@@ -43,13 +43,15 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectDisclaimerComponent } from './components/project-disclaimer/project-disclaimer.component'
 import { TaskComponent } from './components/task/task.component';
+import { TaskFormComponent } from './components/task-form/task-form.component';
 
 @NgModule({
     declarations: [
       TaskDashboardComponent,
       MenubarComponent,
       ProjectDisclaimerComponent,
-      TaskComponent
+      TaskComponent,
+      TaskFormComponent
     ],
     imports: [
       MatFormFieldModule,
@@ -88,11 +90,14 @@ import { TaskComponent } from './components/task/task.component';
       MatTableModule,
       MatTabsModule,
       MatTooltipModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
     ],
     providers: [
         RequestService,
         TaskService,
+    ],
+    entryComponents: [
+      TaskFormComponent
     ],
     exports: [
         TaskDashboardComponent,

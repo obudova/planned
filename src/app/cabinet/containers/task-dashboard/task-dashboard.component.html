@@ -47,8 +47,16 @@
       <task *ngFor="let task of leftTasks" [task]="task"></task>
     </div>
   </div>
-
 </ng-container>
+
+<button
+  mat-fab
+  class="btn-add-task"
+  color="primary"
+  (click)="openCreateTaskModal()">
+  <mat-icon >add</mat-icon>
+</button>
+
 
 
 

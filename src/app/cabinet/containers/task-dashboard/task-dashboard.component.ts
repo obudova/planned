@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { TaskService } from '../../../../services/task.service';
 import * as moment from 'moment';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {TaskFormComponent} from '../../components/task-form/task-form.component';
 
 @Component({
   selector: 'task-dashboard',
@@ -18,6 +20,7 @@ export class TaskDashboardComponent implements OnInit {
   filterForm: FormGroup;
   constructor(
     private taskService: TaskService,
+    private dialog: MatDialog,
     private fb: FormBuilder
   ) { }
 
@@ -28,6 +31,17 @@ export class TaskDashboardComponent implements OnInit {
       });
     this.listAll();
     this.initForm();
+  }
+
+  openCreateTaskModal() {
+    const dialogRef = this.dialog.open(TaskFormComponent, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
   }
 
   listAll() {
