@@ -22,14 +22,18 @@
 
                 <button class="row__item row__item--search mdc-icon-button material-icons"
                         (click)="showSearch = !showSearch">
-                        {{ !showSearch ? 'search' : 'close' }}
+                    {{ !showSearch ? 'search' : 'close' }}
                 </button>
             </div>
             <div class="search" [class.active]="showSearch">
+                <div>
                     <mat-form-field>
-                        <input matInput placeholder="Input" ngModel="searchInput">
+                        <input matInput placeholder="Input" [(ngModel)]="searchInput">
                     </mat-form-field>
-                    <button mat-button (click)="searchProjects"><i class="material-icons">search</i></button>
+                    <button class="mdc-icon-button material-icons"
+                            (click)="searchProjects">search
+                    </button>
+                </div>
             </div>
         </div>
 
