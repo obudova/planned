@@ -7,6 +7,7 @@ import {RequestService} from '../../services/request.service';
 import {CommonModule} from '@angular/common';
 import {MenubarComponent} from './containers/menubar/menubar.component';
 import {
+    MatFormFieldModule,
     MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -49,6 +50,7 @@ import { ProjectDisclaimerComponent } from './components/project-disclaimer/proj
       ProjectDisclaimerComponent
     ],
     imports: [
+        MatFormFieldModule,
         BrowserModule,
         HttpClientModule,
         CommonModule,
