@@ -15,14 +15,11 @@
     <mat-sidenav-content>
         <div class="row">
             <button class="row__item" mat-button (click)="sidenav.open()">
-                <i class="material-icons">
-                    sort
-                </i></button>
+                <i class="material-icons">sort</i></button>
 
-            <div class="row__item profile">
-            </div>
+            <div class="row__item profile"></div>
 
-            <button class="row__item" mat-button (click)="sidenav.open()">
+            <button class="row__item" mat-button (click)="showSearch = !showSearch">
                 <i class="material-icons">
                     search
                 </i>
@@ -31,3 +28,7 @@
         <task-dashboard></task-dashboard>
     </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-form-field>
+    <input matInput placeholder="Input">
+</mat-form-field>
