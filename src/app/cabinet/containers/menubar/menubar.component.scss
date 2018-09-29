@@ -7,9 +7,12 @@
   left: 0;
   right: 0;
 }
-
+.material-icons {
+  color: $blue-green
+}
 .row {
-  padding: 10px 0;
+  margin-bottom: 2rem;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   background: $light-grey;
@@ -21,8 +24,29 @@
     background-image: url("~assets/profileimg.png");
     background-size: contain;
   }
+  &__item {
+    &--search {
+    }
+  }
 }
 
+.search {
+  visibility: hidden;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  background: #F8F8F8;
+  opacity: 0;
+  padding: 0 10px;
+  z-index: 9999;
+  box-shadow: $shadow;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .mat-sidenav {
   width: 50%;
   min-width: 200px;

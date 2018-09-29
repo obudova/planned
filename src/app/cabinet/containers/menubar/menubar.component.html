@@ -13,25 +13,27 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <div class="row">
-            <button class="row__item" mat-button (click)="sidenav.open()">
-                <i class="material-icons">sort</i></button>
+        <div style="position: relative">
+            <div class="row">
+                <button class="row__item mdc-icon-button material-icons" (click)="sidenav.open()">
+                    <i class="material-icons">sort</i></button>
 
-            <div class="row__item profile"></div>
+                <div class="row__item profile"></div>
 
-            <button class="row__item" mat-button (click)="showSearch = !showSearch">
-                <i class="material-icons">
-                    search
-                </i>
-            </button>
+                <button class="row__item row__item--search mdc-icon-button material-icons"
+                        (click)="showSearch = !showSearch">
+                        {{ !showSearch ? 'search' : 'close' }}
+                </button>
+            </div>
+            <div class="search" [class.active]="showSearch">
+                <mat-form-field>
+                    <input matInput placeholder="Input">
+                    <button mat-button><i class="material-icons">search</i></button>
+                </mat-form-field>
+            </div>
         </div>
+
         <task-dashboard></task-dashboard>
-
-        <mat-form-field>
-            <input matInput placeholder="Input">
-        </mat-form-field>
-
-
     </mat-sidenav-content>
 </mat-sidenav-container>
 
