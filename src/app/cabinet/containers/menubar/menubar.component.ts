@@ -10,8 +10,11 @@ import {MatSidenav} from '@angular/material';
 export class MenubarComponent {
     @ViewChild('sidenav') sidenav: MatSidenav;
     reason = '';
-    showSearch = false
-
+    showSearch = false;
+    searchInput = '';
+    searchProjects() {
+        console.log(this.searchInput);
+    }
     close(reason: string) {
         this.reason = reason;
         this.sidenav.close();
