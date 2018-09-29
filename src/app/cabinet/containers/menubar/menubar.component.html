@@ -26,10 +26,12 @@
                 </button>
             </div>
             <div class="search" [class.active]="showSearch">
-                <mat-form-field>
-                    <input matInput placeholder="Input">
-                    <button mat-button><i class="material-icons">search</i></button>
-                </mat-form-field>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Input" ngModel="searchInput">
+                    </mat-form-field>
+                    <button mat-button (click)="searchProjects"><i class="material-icons">search</i></button>
+                </div>
             </div>
         </div>
 
