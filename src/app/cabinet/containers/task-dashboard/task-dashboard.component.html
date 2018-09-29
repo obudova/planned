@@ -20,5 +20,11 @@
   </div>
 </ng-container>
 
+<ng-container *ngIf="tasks">
+ <div class="tasks-container">
+   <task *ngFor="let task of tasks" [task]="task"></task>
+ </div>
+</ng-container>
+
 
 

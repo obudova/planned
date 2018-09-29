@@ -8,19 +8,19 @@ import { TaskService } from '../../../../services/task.service';
 })
 export class TaskDashboardComponent implements OnInit {
   projects: any[];
+  tasks: any[];
   constructor(
     private taskService: TaskService
   ) { }
 
   ngOnInit() {
-    this.taskService.listPersonalTasks()
+    this.taskService.listAllTasks()
       .subscribe((res) => {
-        console.log(res);
-      })
+        this.tasks = res;
+      });
     this.taskService.listProjects()
       .subscribe((res) => {
         this.projects =res;
-        console.log(this.projects);
-      })
+      });
   }
 }

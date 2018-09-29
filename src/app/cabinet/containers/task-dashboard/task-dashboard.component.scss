@@ -4,9 +4,16 @@
   margin: 0 35px;
   height: 110px;
   box-sizing: border-box;
+  margin-bottom: 28px;
+
 }
 
 .projects-container{
   display: flex;
   justify-content: center;
+}
+
+.tasks-container{
+  margin: 0 20px;
+  box-sizing: border-box;
 }

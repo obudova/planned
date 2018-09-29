@@ -42,12 +42,14 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { ProjectDisclaimerComponent } from './components/project-disclaimer/project-disclaimer.component'
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
     declarations: [
       TaskDashboardComponent,
       MenubarComponent,
-      ProjectDisclaimerComponent
+      ProjectDisclaimerComponent,
+      TaskComponent
     ],
     imports: [
         MatFormFieldModule,
