@@ -7,6 +7,7 @@ import { RequestService } from '../../services/request.service';
 import {CommonModule} from '@angular/common';
 import { MenubarComponent } from './containers/menubar/menubar.component';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     BrowserModule,
     HttpClientModule,
     MatButtonModule,
+    MatButtonToggleModule
   ],
   providers: [
     RequestService,

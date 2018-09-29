@@ -1,0 +1,17 @@
+<div class="filter-container">
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+    <mat-button-toggle value="left">
+      Personal
+    </mat-button-toggle>
+    <mat-button-toggle value="center">
+      All
+    </mat-button-toggle>
+    <mat-button-toggle value="right">
+      Project
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="example-selected-value">Selected value: {{group.value}}</div>
+
+  <hr>
+</div>
+
