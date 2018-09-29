@@ -1,3 +1,5 @@
+@import "~assets/components/base";
+
 .example-container {
   position: absolute;
   top: 0;
@@ -5,10 +7,47 @@
   left: 0;
   right: 0;
 }
+.row {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background: $light-grey;
+  box-shadow: $shadow;
+  .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("~assets/profileimg.png");
+    background-size: contain;
+  }
+}
 .mat-sidenav {
   width: 50%;
   min-width: 200px;
   button {
     width: 100%;
+  }
+  .profile {
+    margin-bottom: 35px;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black),url("~assets/profileimg.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__img {
+      border-radius: 50%;
+      bottom: -30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 10%);
+      width: 60px;
+      height: 60px;
+      background-image: url("~assets/profileimg.png");
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat
+    }
   }
 }

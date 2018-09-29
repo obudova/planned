@@ -1,24 +1,33 @@
 <mat-sidenav-container
         class="example-container" (backdropClick)="close('backdrop')">
     <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
+        <div class="profile">
+            <div class="profile__img"></div>
+        </div>
+        <button mat-button (click)="sidenav.open()"><i class="material-icons">person_outline</i> My profile</button>
         <br>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
+        <button mat-button (click)="sidenav.open()"><i class="material-icons">settings</i> Settings</button>
         <br>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
-        <br>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
-        <br>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
-        <br>
-        <button mat-button (click)="close('toggle button')">Toggle</button>
+        <button mat-button (click)="sidenav.open()"><i class="material-icons">logout</i> Log out</button>
         <br>
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <p>
-            <button mat-button (click)="sidenav.open()">Open</button>
-        </p>
+        <div class="row">
+            <button class="row__item" mat-button (click)="sidenav.open()">
+                <i class="material-icons">
+                    sort
+                </i></button>
+
+            <div class="row__item profile">
+            </div>
+
+            <button class="row__item" mat-button (click)="sidenav.open()">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+        </div>
         <task-dashboard></task-dashboard>
     </mat-sidenav-content>
 </mat-sidenav-container>
