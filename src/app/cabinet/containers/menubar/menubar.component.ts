@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, Output, EventEmitter} from '@angular/core';
 import {MatSidenav} from '@angular/material';
 
 @Component({
@@ -12,8 +12,11 @@ export class MenubarComponent {
     reason = '';
     showSearch = false;
     searchInput = '';
+
+    @Output()
+    search: EventEmitter<string> = new EventEmitter<string>(null);
     searchProjects() {
-        console.log(this.searchInput);
+        this.search.emit(this.searchInput);
     }
     close(reason: string) {
         this.reason = reason;
