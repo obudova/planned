@@ -31,4 +31,10 @@ export class TaskService {
       ...options
     });
   }
+  createTask(task: any, id: number, options?: MakeRequestOptions) {
+    return this.requestService.request(`${this.apiUrl}/tasks`, 'POST', {
+      data: {...task, id},
+      ...options
+    });
+  }
 }

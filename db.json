@@ -4,11 +4,16 @@
       "id": 1,
       "title": "First task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
       "project": "Home",
       "project_id": "1",
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538265600000,
       "is_done": false,
       "is_personal": false
@@ -17,9 +22,14 @@
       "id": 2,
       "title": "Second task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538343004000,
       "is_done": false,
       "is_personal": true
@@ -28,11 +38,16 @@
       "id": 3,
       "title": "Third task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
       "project": "Project 1",
       "project_id": "2",
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538343004000,
       "is_done": false,
       "is_personal": false
@@ -41,11 +56,16 @@
       "id": 4,
       "title": "First task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
       "project": "Home",
       "project_id": "1",
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538429404000,
       "is_done": false,
       "is_personal": false
@@ -54,9 +74,14 @@
       "id": 5,
       "title": "Second task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538515804000,
       "is_done": false,
       "is_personal": true
@@ -65,17 +90,90 @@
       "id": 6,
       "title": "Third task",
       "desc": "Some description",
-      "subtasks_id": ["7", "789"],
+      "subtasks_id": [
+        "7",
+        "789"
+      ],
       "project": "Project 1",
       "project_id": "2",
-      "label": ["high priority"],
-      "date_created":  1538214322000,
+      "label": [
+        "high priority"
+      ],
+      "date_created": 1538214322000,
       "due_date": 1538602204000,
       "is_done": false,
       "is_personal": false
+    },
+    {
+      "title": "bn",
+      "due_date": "2018-09-12T21:00:00.000Z",
+      "project": 1,
+      "subtasks": "",
+      "id": 7
+    },
+    {
+      "title": "hjghj",
+      "due_date": "2018-09-18T21:00:00.000Z",
+      "project": 1,
+      "subtasks": "",
+      "id": 8
+    },
+    {
+      "title": "fd",
+      "due_date": "2018-09-19T21:00:00.000Z",
+      "project": 1,
+      "subtasks": "",
+      "id": 9
+    },
+    {
+      "title": "bjh",
+      "due_date": 1537390800000,
+      "project": 1,
+      "subtasks": "",
+      "id": 10
+    },
+    {
+      "title": "fgf",
+      "due_date": 1536786000000,
+      "project": 1,
+      "subtasks": "",
+      "id": 11
+    },
+    {
+      "title": "yrty",
+      "due_date": 1537995600000,
+      "project": 1,
+      "subtasks": "",
+      "id": 12
+    },
+    {
+      "title": "vh",
+      "due_date": 1538082000000,
+      "project": 2,
+      "subtasks": "",
+      "id": 13
+    },
+    {
+      "title": "jyu",
+      "due_date": 1539723600000,
+      "project": 1,
+      "subtasks": "",
+      "id": 14
+    },
+    {
+      "title": "ghj",
+      "due_date": 1539032400000,
+      "project": 2,
+      "subtasks": "",
+      "id": 15
     }
   ],
   "projects": [
+    {
+      "id": 0,
+      "title": "Personal",
+      "tag": "Some tag"
+    },
     {
       "id": 1,
       "title": "Project 1",

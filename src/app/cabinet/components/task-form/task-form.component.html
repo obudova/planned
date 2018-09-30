@@ -1,1 +1,20 @@
-Task form!
+<form [formGroup]="taskForm">
+  <mat-form-field class="">
+    <input matInput placeholder="Name" formControlName="title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Project" formControlName="project">
+      <mat-option *ngFor="let project of data.projects" [value]="project.value">
+        {{project.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Due to" formControlName="due_date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</form>
+<div class="form__controls">
+  <button mat-button color="primary" [mat-dialog-close]="taskForm.value">Create</button>
+</div>
