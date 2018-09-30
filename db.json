@@ -166,6 +166,20 @@
       "project": 2,
       "subtasks": "",
       "id": 15
+    },
+    {
+      "title": "",
+      "due_date": 1537822800000,
+      "project": 2,
+      "subtasks": "",
+      "id": 16
+    },
+    {
+      "title": "New project",
+      "due_date": 1540764000000,
+      "project": 1,
+      "subtasks": "",
+      "id": 17
     }
   ],
   "projects": [
