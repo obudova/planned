@@ -143,9 +143,11 @@ export class TaskDashboardComponent implements OnInit, OnChanges {
     }
 
     processTasks() {
-        this.tasksForToday = this.tasks.filter(task => moment(task.due_date).dayOfYear() === this.today.dayOfYear());
-        const tomorrow = this.today.clone().add(1, 'day');
-        this.tasksForTommorrow = this.tasks.filter(task => moment(task.due_date).dayOfYear() === tomorrow.clone().dayOfYear());
-        this.leftTasks = this.tasks.filter(task => moment(task.due_date).valueOf() > tomorrow.clone().endOf('day').valueOf());
+        if (!!this.tasks) {
+            this.tasksForToday = this.tasks.filter(task => moment(task.due_date).dayOfYear() === this.today.dayOfYear());
+            const tomorrow = this.today.clone().add(1, 'day');
+            this.tasksForTommorrow = this.tasks.filter(task => moment(task.due_date).dayOfYear() === tomorrow.clone().dayOfYear());
+            this.leftTasks = this.tasks.filter(task => moment(task.due_date).valueOf() > tomorrow.clone().endOf('day').valueOf());
+        }
     }
 }
