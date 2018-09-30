@@ -120,7 +120,6 @@ export class TaskDashboardComponent implements OnInit, OnChanges {
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes && changes.searchQuery) {
-            console.log('chaned query', this.searchQuery);
             this.findByString(this.searchQuery);
         }
     }
