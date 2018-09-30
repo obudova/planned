@@ -4,7 +4,7 @@
   </mat-form-field>
   <mat-form-field>
     <mat-select placeholder="Project" formControlName="project">
-      <mat-option *ngFor="let project of data.projects" [value]="project.value">
+      <mat-option *ngFor="let project of data?.projects" [value]="project.value">
         {{project.viewValue}}
       </mat-option>
     </mat-select>
