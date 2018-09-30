@@ -6,6 +6,8 @@
         </div>
         <button mat-button (click)="sidenav.open()"><i class="material-icons">person_outline</i> My profile</button>
         <br>
+        <button mat-button (click)="sidenav.open()"><i class="material-icons">store</i> Store</button>
+        <br>
         <button mat-button (click)="sidenav.open()"><i class="material-icons">settings</i> Settings</button>
         <br>
         <button mat-button (click)="sidenav.open()"><i class="material-icons">logout</i> Log out</button>
@@ -29,14 +31,14 @@
                         <input matInput placeholder="Input" [(ngModel)]="searchInput">
                     </mat-form-field>
                     <button class="mdc-icon-button material-icons"
-                            (click)="searchProjects">search
+                            (click)="searchProjects()">search
                     </button>
                     <button class="row__item row__item--search mdc-icon-button material-icons"
                             (click)="showSearch = !showSearch">close</button>
                 </div>
             </div>
         </div>
-        <task-dashboard></task-dashboard>
+        <task-dashboard [searchQuery]="searchInput"></task-dashboard>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
