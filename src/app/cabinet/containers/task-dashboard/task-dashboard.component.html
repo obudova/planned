@@ -24,7 +24,7 @@
 
 <ng-container *ngIf="projects">
   <div class="projects-container container">
-    <project-disclaimer *ngFor="let project of projects" [project]="project"></project-disclaimer>
+    <project-disclaimer *ngFor="let project of projects.slice(1, projects.length)" [project]="project"></project-disclaimer>
   </div>
 </ng-container>
 
