@@ -11,30 +11,40 @@ export class TaskService {
     this.requestService = requestService;
   }
 
-  listPersonalTasks(options?: MakeRequestOptions): Observable<any> {
-    return this.requestService.request(`${this.apiUrl}/tasks?is_personal=true`, 'GET', {
-      ...options
-    });
-  }
-  listProjectTasks(options?: MakeRequestOptions) {
-    return this.requestService.request(`${this.apiUrl}/tasks?is_personal=false`, 'GET', {
-      ...options
-    });
-  }
-  listAllTasks(options?: MakeRequestOptions) {
-    return this.requestService.request(`${this.apiUrl}/tasks`, 'GET', {
-      ...options
-    });
-  }
-  listProjects(options?: MakeRequestOptions) {
-    return this.requestService.request(`${this.apiUrl}/projects`, 'GET', {
-      ...options
-    });
-  }
-  createTask(task: any, id: number, options?: MakeRequestOptions) {
-    return this.requestService.request(`${this.apiUrl}/tasks`, 'POST', {
-      data: {...task, id},
-      ...options
-    });
-  }
+    listPersonalTasks(options?: MakeRequestOptions): Observable<any> {
+        return this.requestService.request(`${this.apiUrl}/tasks?is_personal=true`, 'GET', {
+            ...options
+        });
+    }
+
+    listProjectTasks(options?: MakeRequestOptions) {
+        return this.requestService.request(`${this.apiUrl}/tasks?is_personal=false`, 'GET', {
+            ...options
+        });
+    }
+
+    listAllTasks(options?: MakeRequestOptions) {
+        return this.requestService.request(`${this.apiUrl}/tasks`, 'GET', {
+            ...options
+        });
+    }
+
+    listProjects(options?: MakeRequestOptions) {
+        return this.requestService.request(`${this.apiUrl}/projects`, 'GET', {
+            ...options
+        });
+    }
+
+    findTasksByString(query: String) {
+        return this.requestService.request(`${this.apiUrl}/tasks?title_like=${query}`, 'GET', {});
+    }
+    findProjectsByString(query: String) {
+        return this.requestService.request(`${this.apiUrl}/projects?title_like=${query}`, 'GET', {});
+    }
+    createTask(task: any, id: number, options?: MakeRequestOptions) {
+        return this.requestService.request(`${this.apiUrl}/tasks`, 'POST', {
+            data: {...task, id},
+            ...options
+        });
+    }
 }
